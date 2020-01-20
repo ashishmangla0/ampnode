@@ -1,13 +1,10 @@
-const express = require('express');
 const nunjucks = require('nunjucks')
-const app = express()
-const port = 4000
-app.get('/', (req, res) => res.send('Hello World!'))
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
-nunjucks.configure('views', {
+const path = require('path');
+
+nunjucks.configure(path.join(__dirname, 'views'), {
     autoescape: true,
-    express: app
 });
-app.get('/', function(req, res) {
-    res.render('index.html');
-});
+
+module.exports = function(req, res) {
+    res.send(nunjucks.render('index.html'));
+};
