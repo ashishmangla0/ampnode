@@ -6,5 +6,5 @@ nunjucks.configure(path.join(__dirname, 'views'), {
 });
 
 module.exports = function(req, res) {
-    res.send(nunjucks.render('index.html',{title: 'this is home page'}));
+    res.send(nunjucks.render('about.html',{title: 'this is about page '}));
 };

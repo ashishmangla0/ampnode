@@ -2,5 +2,8 @@
     "version": 2,
     "builds": [
       { "src": "*.js", "use": "@now/node" }
+    ],
+    "routes": [
+      { "src": "/about", "methods": ["GET"], "dest": "/about.js" }
     ]
 }
