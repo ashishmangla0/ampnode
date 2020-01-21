@@ -4,6 +4,7 @@
       { "src": "*.js", "use": "@now/node" }
     ],
     "routes": [
-      { "src": "/about", "methods": ["GET"], "dest": "/about.js" }
+      { "src": "/", "methods": ["GET"], "dest": "/index.js" },
+      { "src": "/amp", "methods": ["GET"], "dest": "/amp.js" }
     ]
 }

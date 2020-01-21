@@ -6,5 +6,5 @@ nunjucks.configure(path.join(__dirname, 'views'), {
 });
 
 module.exports = function(req, res) {
-    res.send(nunjucks.render('web/index.html',{title: 'this is home page'}));
+    res.send(nunjucks.render('amp/index.html',{title: 'this is home page for amp'}));
 };
