@@ -1,7 +1,9 @@
 {
     "version": 2,
     "builds": [
-      { "src": "*.js", "use": "@now/node" }
+      { "src": "*.js", "use": "@now/node" },
+      { "src": "/public/images/*", "use": "@now/static"},
+      { "src": "/public/css/*.css", "use": "@now/static"}
     ],
     "routes": [
       { "src": "/", "methods": ["GET"], "dest": "/index.js" },
